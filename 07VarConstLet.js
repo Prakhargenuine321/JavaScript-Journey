@@ -1,8 +1,8 @@
-const accountId = 14453; //-->Change nahi hota (cna't reassign)
+const accountId = 14453; //-->Change nahi hota (can't re-assign).
 
-let accountEmail = "prakhargenuine@gmail.com"; //Change hota hai this can be always prefered.
+let accountEmail = "prakhargenuine@gmail.com"; //Change hota hai this can be always preferred.
 
-var accountPassword = "1223"; //-->Change hota hai *avoid using "var" because "block-scope" aur "function-scope" problem ki wajah sae.
+var accountPassword = "1223"; //-->Change hota hai avoid using "var" because "block-scope" aur "function-scope" problem ki wajah sae.
 
 accountCity = "Jaipur"; //-->Hum js maein aise bhi variables declare karte hain but yaeh aek *acchi practice nahi hai*.
 
