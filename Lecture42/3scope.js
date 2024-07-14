@@ -1,8 +1,8 @@
-//var c = 300
-let a = 300
+//var c = 300;
+let a = 300;
 if (true) {
-    let a = 10
-    const b = 20
+    let a = 10;
+    const b = 20;
     // console.log("INNER: ", a);
     
 }
@@ -15,24 +15,24 @@ if (true) {
 
 
 function one(){
-    const username = "hitesh"
+    const username = "hitesh";
 
     function two(){
-        const website = "youtube"
+        const website = "youtube";
         console.log(username);
     }
     // console.log(website);
 
-     two()
+    two();
 
 }
 
 // one()
 
 if (true) {
-    const username = "hitesh"
+    const username = "hitesh";
     if (username === "hitesh") {
-        const website = " youtube"
+        const website = " youtube";
         // console.log(username + website);
     }
     // console.log(website);
@@ -44,15 +44,15 @@ if (true) {
 // ++++++++++++++++++ interesting ++++++++++++++++++
 
 
-console.log(addone(5))
+console.log(addone(5));
 
 function addone(num){
-    return num + 1
+    return num + 1;
 }
 
 
 
-addTwo(5)
+addTwo(5);
 const addTwo = function(num){
-    return num + 2
+    return num + 2;
 }
