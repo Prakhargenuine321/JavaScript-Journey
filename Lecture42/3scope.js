@@ -56,3 +56,7 @@ addTwo(5);
 const addTwo = function(num){
     return num + 2;
 }
+
+
+//Some important points-->
+//1)Global scope is different in "windows" of browser and different for node on 'VS'.
