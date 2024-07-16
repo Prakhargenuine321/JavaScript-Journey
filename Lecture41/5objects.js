@@ -1,11 +1,11 @@
-//const tinderUser = new Object(); //declaration using constructor.
-const tinderUser = {}; //declaration using object literals, better and efficient way.
+const tinderUser = new Object(); //declaration using constructor.
+// const tinderUser = {}; //declaration using object literals, better and efficient way.
 
 tinderUser.id = "123abc";
 tinderUser.name = "Sammy";
 tinderUser.isLoggedIn = false;
 
-// console.log(tinderUser);
+console.log(tinderUser);
 
 
 //nesting the objects inside objects as much as we need.
@@ -87,7 +87,7 @@ const {courseInstructor: instructor} = course; //giving your preferred name for 
 // console.log(instructor);
 
 
-//following are the JSON format which is used to formst data when fetched using API.
+//following are the JSON format which is used to format data when fetched using API.
 //In JSON: key and value both are of "string" type.
 
 
