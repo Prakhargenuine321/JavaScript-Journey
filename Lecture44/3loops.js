@@ -29,10 +29,14 @@ map.set('IN', "India")
 
 // console.log(map);
 
+
+//in following code if we take 'key' there it will print in form of array so to get it seperate take 'key' & 'value' inside [] so that it will destructure the array.
 for (const [key, value] of map) {
     // console.log(key, ':-', value);
 }
 
+
+//objects are not iterable using 'for-of' loop there are another methods for it.
 const myObject = {
     game1: 'NFS',
     game2: 'Spiderman'
