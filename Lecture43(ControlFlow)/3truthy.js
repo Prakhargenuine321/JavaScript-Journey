@@ -20,11 +20,13 @@ if (userEmail) {
 
 const emptyObj = {}
 
-if (Object.keys(emptyObj).length === 0) {
+if (Object.keys(emptyObj).length === 0) { //it  = will store all "keys" of given object in array from and then check it's length.
     console.log("Object is empty");
 }
 
-// Nullish Coalescing Operator (??): null undefined
+// Nullish Coalescing Operator (??):this operator will operate over--> 1)null 2)undefined
+//returns its right-hand side operand when its left-hand side operand is null or undefined, and otherwise returns its left-hand side operand.
+//The nullish coalescing operator has the fifth-lowest operator precedence, directly lower than || and directly higher than the conditional (ternary) operator.
 
 let val1;
 // val1 = 5 ?? 10
