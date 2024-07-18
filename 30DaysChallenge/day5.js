@@ -71,3 +71,35 @@
 
 
 //Task9
+
+// let number = 10;
+
+// let myFunction = () => console.log("I worked in higher order function!");
+
+
+// let highFunction = (myFunction , number) => {
+//     while(number > 0){
+//         myFunction();
+//         number--;
+//     }
+// }
+
+// highFunction(myFunction , number);
+
+
+//Task10
+
+// function addNum(value){
+//     return value + 10;
+// }
+
+// function divNum(result){
+//     return result % 3;
+// }
+
+// let highFunc = (func1 , func2 , value) => {
+//     let result = func1(value);
+//     console.log(`Final Answer is: ${func2(result)}`);
+// }
+
+// highFunc(addNum , divNum , 25);
