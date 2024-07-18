@@ -47,6 +47,7 @@ const myCoding = [
 
 
 //in following code 'item' is referred to as 'object' inside array.
+//following concept is used when we have to fetch data from 'array of objects' as taking out pricing, link and name etc.
 // myCoding.forEach( (item) => {
     
 //     console.log(item.languageName);
