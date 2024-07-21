@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chai aur code </title>
+</head>
+<body style="background-color: #212121; color: #fff;">
+    
+</body>
+<script>
+    //we can create this function so that we can loop-it and create multiple elements.
+    function createChild(){
+        const div = document.createElement('div')
+    console.log(div);
+    div.className = "main"
+    div.id = Math.round(Math.random() * 10 + 1)
+    div.setAttribute("title", "generated title")
+    div.style.backgroundColor = "green"
+    div.style.padding = "12px"
+    // div.innerText = "Chai aur code" //this is method-1 to add text but it overrides the existing value so it is 2-way process.
+
+    //but using following code we can add text and it is an one way
+    //but which method is better it is an question of debate so we will understand further which to use.
+    const addText = document.createTextNode("Chai aur code")
+    div.appendChild(addText) //this method is used to add created node.
+
+    document.body.appendChild(div) //also in this also.
+    }
+</script>
+</html>
