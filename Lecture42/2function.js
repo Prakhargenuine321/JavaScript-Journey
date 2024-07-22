@@ -9,7 +9,7 @@ function calculateCartPrice(val1, val2, ...num1){ //here '...' is 'rest operator
     return num1
 }
 
-// console.log(calculateCartPrice(200, 400, 500, 2000))
+console.log(calculateCartPrice(200, 400, 500, 2000))
 
 
 
@@ -21,7 +21,7 @@ const user = {
 }
 
 function handleObject(anyobject){ //passing an object.
-    console.log(`Username is ${anyobject.username} and price is ${anyobject.price}`); //if we will do 'prices' instead of 'price' then it will generate error.
+    // console.log(`Username is ${anyobject.username} and price is ${anyobject.price}`); //if we will do 'prices' instead of 'price' then it will generate error.
 }
 
 // handleObject(user); //passing object reference
@@ -37,4 +37,4 @@ function returnSecondValue(getArray){
 }
 
 // console.log(returnSecondValue(myNewArray)); //passing array-reference.
-console.log(returnSecondValue([200, 400, 500, 1000])); //passing whole array.
+// console.log(returnSecondValue([200, 400, 500, 1000])); //passing whole array.
