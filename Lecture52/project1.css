@@ -1,0 +1,56 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html , body{
+    height: 100%;
+    width: 100%;
+}
+
+h1{
+    position: relative;
+    text-align: center;
+    font-size: 4rem;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.switch-wrapper{
+    position: relative;
+    height: 30vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.button{
+    height: 75%;
+    width: 15%;
+    border: 2px solid black;
+    border-radius: 20px;
+}
+
+.switch-wrapper>:nth-child(1){
+    background-color: yellow;
+}
+
+.switch-wrapper>:nth-child(2){
+    background-color: lightgreen;
+}
+
+.switch-wrapper>:nth-child(3){
+    background-color: orange;
+}
+
+.switch-wrapper>:nth-child(4){
+    background-color: white;
+}
+
+
+h2{
+    position: relative;
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
