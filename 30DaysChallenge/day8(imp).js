@@ -101,7 +101,7 @@ newArr = [...arr , ...newArr];
 
 //Task6
 
-function multiValueSum(val1 , val2 , ...num){
+function multiValueSum(val1 , val2 , ...num){ //using 'rest(...)' operator to take unlimited values as an parameter.
     let sum = 0;
     num.forEach((n) => {
         sum = sum + n;
@@ -126,5 +126,64 @@ product = productOfTwo(13);
 // console.log(product);
 
 
-//Task8
+//Task8  -->Enhanced Literal
+
+//ECMAScript 2015 (ES6) mein ek shorthand syntax introduce hua, jo object properties aur methods define karne ko zyada concise aur readable banata hai.
+
+//#1 -->If a variable name and a property name are the same, you can omit the property name.
+const hisNam = "Prakhar";
+const hisAge = 22;
+
+const personId = {
+    hisNam,
+    hisAge
+};
+
+// console.log(personId);
+
+//#2 -->You can define methods without the function keyword.
+
+const person = {
+    hisNam,
+    hisAge,
+    greet(){
+        console.log("Hello ji bina function keyword kae hoon!");
+    }
+}
+
+// person.greet();
+// console.log(person);
+
+
+//Task9 -->Continuing same topic as above but below is known as 'Computed Property Names'.
+
+
+//#3 -->You can use expressions to define property names dynamically.
+const keyName = "grade";
+
+const per = {
+    hisNam,
+    hisAge,
+    [keyName] : "A"
+}
+
+// console.log(per);
+
+
+//#4 -->You can use shorthand syntax to define prototype properties.
+
+const proto = {
+    sayHello(){
+        console.log("Hello Ji");
+    }
+};
+
+const protoType = {
+    hisNam,
+    hisAge,
+    __proto__ : proto
+}
+
+protoType.sayHello();
+
 
