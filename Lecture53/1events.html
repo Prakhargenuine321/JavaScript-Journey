@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Event Handling</title>
+  </head>
+  <body style="background-color: #414141; color: aliceblue">
+    <h2>Amazing Images</h2>
+    <div>
+      <ul id="images">
+        <li>
+          <img
+            width="200px"
+            id="photoshop"
+            src="https://images.pexels.com/photos/3561339/pexels-photo-3561339.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load"
+            alt="photoshop"
+          />
+        </li>
+        <li>
+          <img
+            width="200px"
+            id="japan"
+            src="https://images.pexels.com/photos/3532553/pexels-photo-3532553.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load"
+            alt=""
+          />
+        </li>
+        <li>
+          <img
+            width="200px"
+            id="river"
+            src="https://images.pexels.com/photos/3532551/pexels-photo-3532551.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load"
+            alt=""
+          />
+        </li>
+        <li>
+          <img
+            width="200px"
+            id="owl"
+            src="https://images.pexels.com/photos/3532552/pexels-photo-3532552.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load"
+            alt=""
+          />
+        </li>
+        <li>
+          <img
+            width="200px"
+            id="prayer"
+            src="https://images.pexels.com/photos/2522671/pexels-photo-2522671.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load"
+            alt=""
+          />
+        </li>
+        <li>
+          <a style="color: aliceblue" href="https://google.com" id="google"
+            >Google</a
+          >
+        </li>
+      </ul>
+    </div>
+    <script>
+
+      //following method theek hai but yaeh approach problem create kar sakti hai so it is better to use "eventListener" kyunki humko wahan par humaein 'propogation' ki functionality bhi milti hai.
+       
+      // document.getElementById('owl').onclick = function(){
+      //     alert("owl clicked")
+      // }
+
+
+      //following are earlier approaches.
+
+      // attachEvent()
+      // jQuery - on
+
+
+      //you need to understand about following topics-
+
+      // type, timestamp, defaultPrevented
+      // target, toElement, srcElement, currentTarget,
+      // clientX, clientY, screenX, screenY
+      // altkey, ctrlkey, shiftkey, keyCode
+
+
+      //in folloeing we learn about 'propogation' and especially about 1)eventBubbling and 2)eventCapturing.
+
+
+      // document.getElementById('images').addEventListener('click', function(e){
+      //     console.log("clicked inside the ul");
+      // }, false)  //-->yahan par jo 3rd parameter pass kiya gaya hai woh interviews maein poocha jata hai ki kya hai toh kuch applications bina iskae run hi nahi kar paati and by-default bhi yaeh 'false' hota hai.
+      //for more details just go for this -->https://chatgpt.com/c/9108d664-9f5d-46f6-96d2-84967f90e0ba -->(must read**)
+
+      // document.getElementById('owl').addEventListener('click', function(e){
+      //     console.log("owl clicked");
+      //     e.stopPropagation(); //-->jaisa ki humnae upar padha about 'propogation' toh kabhi-kabhi hum seperate use karna ho toh iss method ka use karo to stop propogation.
+      // }, false)
+
+      // document.getElementById('google').addEventListener('click',function(e){
+      //     e.preventDefault(); //it will stop default behaviour of reching to webpage after clicking the link.
+      //     e.stopPropagation(); //--> it will stop propogation.
+      //     console.log("google clicked");
+      // }, false)
+
+
+    //to understand about 'target' properties you can console it on browser console to get it's other functionalities.
+    //   document.querySelector("#images").addEventListener("click", function (e) {
+    //     console.log(e.target.tagName);
+    //     if (e.target.tagName === "IMG") { //providing strict check kyunki when we click on 'link(google)' it is removing whole 'ul' as 'link' has parent 'ul'.
+    //       console.log(e.target.id);
+    //       let removeIt = e.target.parentNode;
+    //       removeIt.remove();
+    //     }
+    //   });
+
+      //removeIt.parentNode.removeChild(removeIt);
+    </script>
+  </body>
+</html>
