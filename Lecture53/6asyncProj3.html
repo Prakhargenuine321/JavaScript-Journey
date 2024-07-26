@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Unlimited Color</title>
+  </head>
+  <body style="background-color: #212121">
+    <h1
+      style="
+        color: #fff;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        text-align: center;
+      "
+    >
+      Start should change the Background color every second
+    </h1>
+    <button
+      id="start"
+      style="font-family: Verdana, Geneva, Tahoma, sans-serif; padding: 10px"
+    >
+      Start
+    </button>
+    <button
+      id="stop"
+      style="font-family: Verdana, Geneva, Tahoma, sans-serif; padding: 10px"
+    >
+      Stop
+    </button>
+
+    <script>
+      //generate random color
+      const randomColor = function () {
+        const number = "0123456789ABCDEF";
+        let color = "#";
+        for (let i = 0; i < 6; i++) {
+          color += number[Math.floor(Math.random() * 16)];
+        }
+        return color;
+      };
+
+      function changeBgColor() {
+        document.body.style.backgroundColor = randomColor();
+      }
+
+      //selecting buttons
+      const start = document.getElementById("start");
+      const stop = document.getElementById("stop");
+
+      let intervalId;
+
+      start.addEventListener("click", function () {
+        if (!intervalId) {
+          //The interval is only set if intervalId is null, preventing multiple intervals from being set.
+          intervalId = setInterval(changeBgColor, 1000);
+        }
+      });
+
+      stop.addEventListener("click", function () {
+        clearInterval(intervalId);
+        intervalId = null; //The interval is cleared and intervalId is set to null when the stop button is clicked.
+      });
+    </script>
+  </body>
+</html>
