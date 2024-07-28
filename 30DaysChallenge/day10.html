@@ -15,6 +15,16 @@
             margin-top: 20px;
             background-image: url(https://images.unsplash.com/photo-1571475359259-0631ef3d7ebb?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
         }
+
+        .change-color{
+            position: relative;
+            height: 200px;
+            width: 200px;
+            border: 2px solid black;
+            border-radius: 10px;
+            margin-top: 20px;
+            background-color: tomato;
+        }
     </style>
     <title>Just Practice</title>
 </head>
@@ -25,6 +35,42 @@
 
     <!-- Task2 -->
     <div class="image"></div>
+
+    <!-- Task3 & 4 -->
+    <div class="change-color"></div>
+
+    <!-- Task5 & 6 -->
+    <input type="text" style="margin-top: 20px;" placeholder="Input Here!" class="input-field">
+    <p class="keyup-event"></p>
+
+    <!-- Task7 -->
+    <form class="form-sub">
+        <input type="text" class="check-field">
+        <input type="submit">
+    </form>
+
+    <!-- Task8 -->
+    <label>Choose Programming Language
+        <select name="coding-lang" class="code-lang">
+            <option value="">Select One</option>
+            <option value="Java">Java</option>
+            <option value="JavaScript">JavaScript</option>
+            <option value="C++">C++</option>
+        </select>
+    </label>
+    <p class="label"></p>
+
+    <!-- Task9 &10-->
+    <label>Add your Programming language in list:<input type="text" class="input-list">
+    </label>
+    <ul class="list-items">
+        <li>Java</li>
+        <li>JavaScript</li>
+        <li>C++</li>
+        <li>Python</li>
+    </ul>
+    <button class="add-list-item">Add list here</button>
+
     <script src="./day10.js"></script>
 </body>
 </html>
