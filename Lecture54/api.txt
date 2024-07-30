@@ -1,0 +1,9 @@
+1)API --->API stands for Application Programming Interface. It's a set of rules that define how two or more software programs can communicate with each other and share data.
+2)APIs are written in programming languages like JavaScript or C++ and work behind the scenes to allow users to find and retrieve information. 
+
+3)You can checkout these API -->randomuser.mo
+4)There you can find a lot of complex data, so to convert it in understandable format you can use "JSON Format" to format it and easy to understand.
+5)You can also access your 'github' API as --> https://api.github.com/users/<user-name>
+
+6)As we are using 'fetch()' method it is new one but in earlier time 'XMLhttp' request is used to fetch API so if you want to know about it go to mdn and read aboUt AJAX.
+7)One who has better understanding of AJAX they can do asynchronous programming a lot better.
