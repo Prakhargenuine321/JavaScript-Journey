@@ -4,6 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        form{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 40px;
+        }
+        .image-container{
+            width: 50vw;
+            height: 40vh;
+            background-color: rgb(141, 132, 132);
+            margin: 0 auto;
+            border-radius: 20px;
+            border: 2px solid lightseagreen;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+        }
+        img{
+            width: 300px;
+            height: 250px;
+            border-radius: 20px;
+            background-size: contain;
+        }
+    </style>
 </head>
 <body style="background-color: #212121;">
     <!-- following are the states while accessing API  -->
@@ -12,27 +37,74 @@
 2	HEADERS_RECEIVED	send() has been called, and headers and status are available.
 3	LOADING	Downloading; responseText holds partial data.
 4	DONE	The operation is complete. -->
-<div class="image" style="height: 200px; width: 200px; background-size: cover; background-color: #fff;">
+    
+    <div class="image-container">
+        <div class="followers" style="font-family: Verdana, Geneva, Tahoma, sans-serif; font-size: 0.8rem;">
+            <h2>Followers:</h2>
+            <span class="follow-count"></span>
+        </div>
+    </div>
+    <form>
+        <input type="text" class="input-profile" placeholder="github username">
+        <button>Get Details</button>
+    </form>
+
+    
+
 
 </div>
 </body>
 <script>
-    let imageUrl;
-    const imageDiv = document.querySelector('.image');
-    const requestUrl = 'https://api.github.com/users/Prakhargenuine321';
-    const xhr = new XMLHttpRequest(); //it is an class so need to create an object related to it.
-    xhr.open('GET', requestUrl); //open request 
-    xhr.onreadystatechange = function(){  //it is used to monitor change in state
-        console.log(xhr.readyState);
-        if (xhr.readyState === 4) {
-            const data = JSON.parse(this.responseText); //as data is in 'string' format so need to convert in object form and using 'this' to get into the scope.
-            console.log(typeof data);
-            console.log(data.followers);
-            imageUrl = data.avatar_url;
-            console.log(imageUrl);
+    
+    //creating an 'image' element and appending it to it's parent-container.
+    let img = document.createElement('img');
+    document.querySelector('.image-container').appendChild(img);
+
+
+    let followers = document.querySelector('.follow-count');
+
+
+    //selecting the 'input' field to update the link as per user requirement.
+    let inputUser = document.querySelector('input');
+
+
+    //selecting the 'button' to update 'image-src' after 'user-input' in input-field whenever they click the button.
+    const buttonDetails = document.querySelector('button');
+
+
+
+    buttonDetails.addEventListener('click' , function(e){
+        e.preventDefault();
+        let xhr = new XMLHttpRequest();
+        xhr.open('GET' , `https://api.github.com/users/${inputUser.value}` , true);
+
+        xhr.responseType = "json";
+
+        xhr.onload = function(){
+        if (xhr.status >= 200 && xhr.status < 300) {
+            // Assuming the response contains the image URL
+            let imageUrl = xhr.response.avatar_url; // Adjust this line based on your API response structure
+            let follower = xhr.response.followers;
+
+            // Display the image
+            
+            img.src = imageUrl;
+            img.alt = 'Image Description';
+            followers.textContent = follower;
+            // Append the image to a container in the DOM
+        } else {
+            console.error('Error fetching the image URL:', xhr.status, xhr.statusText);
         }
-    }
+    };
+
+    // Define what happens in case of error
+    xhr.onerror = function () {
+        console.error('Request failed');
+    };
+
+    // Send the request
     xhr.send();
-    imageDiv.style.backgroundImage = "url(imageUrl)";
+    inputUser.value = '';
+    })
 </script>
 </html>
