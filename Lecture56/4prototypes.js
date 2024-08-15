@@ -80,7 +80,7 @@ const TASupport = {
     __proto__: TeachingSupport //we can use "__proto__" property to enable inheritance
 }
 
-Teacher.__proto__ = User //aisa jaroori nahi hai ki hum "__proto" ka access sirf inside object karte hain
+Teacher.__proto__ = User //aisa jaroori nahi hai ki hum "__proto__" ka access sirf inside object karte hain
 //we can also do this outside of it.
 
 // modern syntax--> but above syntax is outdated so we need to use modern one.
@@ -98,7 +98,7 @@ let anotherUsername = "ChaiAurCode     "
 String.prototype.trueLength = function(){
     console.log(`${this}`); //jab execute karoge tab you will know ki "this" kya kar raha hai,
 
-    //chalo bata deta hoon ki jab bhi "this" call hoga toh uskae paas "method" ko current call kisnae kiya uska
+    //chalo bata deta hoon ki jab bhi "this" call hoga toh uskae paas, "method" ko current call kisnae kiya uska
     //reference hoga.
     console.log(`True length is: ${this.trim().length}`);
 }
