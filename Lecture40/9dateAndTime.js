@@ -53,4 +53,4 @@ let newDate = new Date()
 //To access it we can use following method
 let options = { weekday: 'long' };
 let weekday = newDate.toLocaleDateString('default', options);
-console.log(weekday); // Output will be the full weekday name, e.g., "Thursday"
+// console.log(weekday); // Output will be the full weekday name, e.g., "Thursday"
