@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>React</title>
+  </head>
+  <body style="background-color: lightslategray;">
+    <button>Learn Bind</button>
+  </body>
+  <script>
+    class React{
+        constructor(){
+            this.library = "React";
+            this.server = "https://localhost:300";
+            document.querySelector("button").addEventListener("click" , this.learnBind.bind(this)); //try with and without 
+            // .bind() and you will understand.
+        }
+
+        learnBind(){
+            console.log("Learn Bind! you just clicked");
+            console.log(this.server);
+            console.log(this);
+            
+        }
+    }
+
+    const app = new React();
+
+    // In this example, bind is used to ensure that the this keyword inside the learnBind method refers
+    // to the React class instance rather than the button element. 
+    // This is crucial because it allows the method to access the class properties like server and library correctly when the button is clicked.
+  </script>
+</html>
